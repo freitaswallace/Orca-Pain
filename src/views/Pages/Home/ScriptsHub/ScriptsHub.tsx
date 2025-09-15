@@ -6,11 +6,39 @@ import { px } from '../../../utils/px';
 // Adicione aqui todos os scripts do Pain Hub que você deseja incluir.
 // Exemplo de estrutura:
 const scripts = [
-  { name: 'Script 1', action: () => { /* lógica do Script 1 */ } },
-  { name: 'Script 2', action: () => { /* lógica do Script 2 */ } },
-  { name: 'ESP NOMES', action: () => { /* lógica do ESP NOMES */ } },
-  // Adicione outros scripts conforme necessário
-];
+  { 
+  name: 'Infinite Yield', 
+  action: () => {
+    try {
+      // Executa o script no Roblox
+      window.game.execute('loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()');
+    } catch (e) {
+      alert("Erro ao executar Infinite Yield: " + e.message);
+    }
+  }
+},
+  { 
+  name: 'Infinite Yield', 
+  action: () => {
+    try {
+      // Executa o script no Roblox
+      window.game.execute('loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()');
+    } catch (e) {
+      alert("Erro ao executar Infinite Yield: " + e.message);
+    }
+  }
+},
+  { 
+  name: 'Infinite Yield', 
+  action: () => {
+    try {
+      // Executa o script no Roblox
+      window.game.execute('loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()');
+    } catch (e) {
+      alert("Erro ao executar Infinite Yield: " + e.message);
+    }
+  }
+};
 
 export function ScriptsHub({ theme }) {
   return (

@@ -19,7 +19,7 @@ function Home() {
 			<Server />
 			<FriendActivity />
 			<Profile />
-			<ScriptsHub /> {/* <--- ADICIONE ESTA LINHA AQUI */}
+			<ScriptsHub />
 		</Canvas>
 	);
 }

@@ -16,7 +16,7 @@ jobs:
         uses: bahmutov/npm-install@v1.8.0
         with:
           useLockFile: true
-          install-command: npm ci
+          useCache: false
 
       - name: Run ESLint
         run: |

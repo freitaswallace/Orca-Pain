@@ -38,7 +38,7 @@ const scripts = [
       alert("Erro ao executar Infinite Yield: " + e.message);
     }
   }
-};
+];
 
 export function ScriptsHub({ theme }) {
   return (

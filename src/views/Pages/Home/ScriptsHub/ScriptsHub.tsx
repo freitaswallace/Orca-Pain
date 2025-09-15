@@ -1,73 +1,45 @@
-import React from 'react';
-import { Card } from '../../Components/Card';
-import { DashboardPage } from '../DashboardPage';
-import { px } from '../../../utils/px';
+import Roact from "@rbxts/roact";
+import Card from "components/Card"; // ajuste o caminho se necessário
 
-// Adicione aqui todos os scripts do Pain Hub que você deseja incluir.
-// Exemplo de estrutura:
-const scripts = [
-  { 
-    name: 'Infinite Yield', 
-    action: () => {
-      try {
-        window.game.execute('loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()');
-      } catch (e) {
-        alert("Erro ao executar Infinite Yield: " + e.message);
-      }
-    }
-  },
-  { 
-    name: 'Infinite Yield', 
-    action: () => {
-      try {
-        window.game.execute('loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()');
-      } catch (e) {
-        alert("Erro ao executar Infinite Yield: " + e.message);
-      }
-    }
-  },
-  { 
-    name: 'Infinite Yield', 
-    action: () => {
-      try {
-        window.game.execute('loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()');
-      } catch (e) {
-        alert("Erro ao executar Infinite Yield: " + e.message);
-      }
-    }
-  }
-]; // Correct closing
-export function ScriptsHub({ theme }) {
-  return (
-    <Card
-      index={4}
-      page={DashboardPage.Home}
-      theme={theme}
-      size={px(326, 416)}
-      // Ajuste a posição conforme necessário para ficar ao lado do Friend Activity
-      position={new UDim2(0, 710, 1, 0)}
-      title="Scripts Hub"
-    >
-      <div style={{ display: "flex", flexDirection: "column" }}>
-        {scripts.map((script, idx) => (
-          <button
-            key={idx}
-            onClick={script.action}
-            style={{
-              marginBottom: 8,
-              padding: "10px",
-              fontSize: "16px",
-              borderRadius: "6px",
-              border: "1px solid #ccc",
-              background: theme?.backgroundSecondary || "#f4f4f4",
-              color: theme?.textPrimary || "#333",
-              cursor: "pointer"
-            }}
-          >
-            {script.name}
-          </button>
-        ))}
-      </div>
-    </Card>
-  );
+function ScriptsHub() {
+	return (
+		<Card
+			Index={4}
+			Page="Home"
+			Size={new UDim2(0, 326, 0, 416)}
+			Position={new UDim2(0, 710, 0, 0)} // ajuste se quiser mudar a posição
+			Title="Scripts Hub"
+		>
+			<frame Size={new UDim2(1, 0, 1, 0)} BackgroundTransparency={1}>
+				<uilistlayout Padding={new UDim(0, 8)} />
+				<textbutton
+					Text="Infinite Yield"
+					Size={new UDim2(1, -20, 0, 36)}
+					Position={new UDim2(0, 10, 0, 10)}
+					BackgroundColor3={Color3.fromRGB(60, 180, 75)}
+					TextColor3={Color3.fromRGB(255, 255, 255)}
+					Event={{
+						MouseButton1Click: () => {
+							// Coloque aqui a lógica para executar o script dentro do Roblox
+							print("Executar Infinite Yield");
+						},
+					}}
+				/>
+				<textbutton
+					Text="Outro Script"
+					Size={new UDim2(1, -20, 0, 36)}
+					BackgroundColor3={Color3.fromRGB(70, 130, 180)}
+					TextColor3={Color3.fromRGB(255, 255, 255)}
+					Event={{
+						MouseButton1Click: () => {
+							print("Executar Outro Script");
+						},
+					}}
+				/>
+				{/* Adicione mais textbutton para outros scripts */}
+			</frame>
+		</Card>
+	);
 }
+
+export = ScriptsHub;

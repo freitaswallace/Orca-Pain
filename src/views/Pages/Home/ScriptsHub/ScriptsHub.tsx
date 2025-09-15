@@ -7,39 +7,36 @@ import { px } from '../../../utils/px';
 // Exemplo de estrutura:
 const scripts = [
   { 
-  name: 'Infinite Yield', 
-  action: () => {
-    try {
-      // Executa o script no Roblox
-      window.game.execute('loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()');
-    } catch (e) {
-      alert("Erro ao executar Infinite Yield: " + e.message);
-    }
-  }
-},
-  { 
-  name: 'Infinite Yield', 
-  action: () => {
-    try {
-      // Executa o script no Roblox
-      window.game.execute('loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()');
-    } catch (e) {
-      alert("Erro ao executar Infinite Yield: " + e.message);
-    }
-  }
-},
-  { 
-  name: 'Infinite Yield', 
-  action: () => {
-    try {
-      // Executa o script no Roblox
-      window.game.execute('loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()');
-    } catch (e) {
-      alert("Erro ao executar Infinite Yield: " + e.message);
+    name: 'Infinite Yield', 
+    action: () => {
+      try {
+        window.game.execute('loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()');
+      } catch (e) {
+        alert("Erro ao executar Infinite Yield: " + e.message);
+      }
     }
   },
-];
-
+  { 
+    name: 'Infinite Yield', 
+    action: () => {
+      try {
+        window.game.execute('loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()');
+      } catch (e) {
+        alert("Erro ao executar Infinite Yield: " + e.message);
+      }
+    }
+  },
+  { 
+    name: 'Infinite Yield', 
+    action: () => {
+      try {
+        window.game.execute('loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()');
+      } catch (e) {
+        alert("Erro ao executar Infinite Yield: " + e.message);
+      }
+    }
+  }
+]; // Correct closing
 export function ScriptsHub({ theme }) {
   return (
     <Card

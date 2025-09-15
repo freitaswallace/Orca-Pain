@@ -4,7 +4,7 @@ import Canvas from "components/Canvas";
 import { useScale } from "hooks/use-scale";
 import { scale } from "utils/udim2";
 import FriendActivity from "./FriendActivity";
-import ScriptsHub from './ScriptsHub/ScriptsHub';
+import ScriptsHub from "./ScriptsHub/ScriptsHub";
 import Profile from "./Profile";
 import Server from "./Server";
 import Title from "./Title";

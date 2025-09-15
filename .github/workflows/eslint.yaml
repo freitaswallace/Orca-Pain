@@ -10,20 +10,14 @@ jobs:
   ESLint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v2
 
-      - name: Cache npm
-  uses: actions/cache@v3
-  with:
-    path: ~/.npm
-    key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-    restore-keys: |
-      ${{ runner.os }}-node-
+      - name: Install NPM dependencies
+        uses: bahmutov/npm-install@v1.8.0
+        with:
+          useLockFile: true
+          install-command: npm ci
 
-      - name: npm install
-  uses: bahmutov/npm-install@v1.7.4
-  with:
-    cache: false
-    
       - name: Run ESLint
-        run: npx eslint src/
+        run: |
+          npx eslint src/

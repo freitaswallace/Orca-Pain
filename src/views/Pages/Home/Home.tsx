@@ -1,4 +1,3 @@
-import { ScriptsHub } from './ScriptsHub/ScriptsHub';
 import Roact from "@rbxts/roact";
 import { pure } from "@rbxts/roact-hooked";
 import Canvas from "components/Canvas";
@@ -20,6 +19,7 @@ function Home() {
 			<Server />
 			<FriendActivity />
 			<Profile />
+			<ScriptsHub /> {/* <--- ADICIONE ESTA LINHA AQUI */}
 		</Canvas>
 	);
 }

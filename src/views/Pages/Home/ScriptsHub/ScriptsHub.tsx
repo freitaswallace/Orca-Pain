@@ -1,5 +1,5 @@
 import Roact from "@rbxts/roact";
-import Card from "components/Card"; // ajuste o caminho se necessário
+import Card from "../../Components/Card";
 
 const SCRIPTS = [
 	{ name: "Infinite Yield", onClick: () => print("Executar Infinite Yield") },

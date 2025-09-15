@@ -13,10 +13,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install NPM dependencies
-        uses: bahmutov/npm-install@v1.8.0
-        with:
-          useLockFile: true
-          useCache: false
+        uses: bahmutov/npm-install@v1.7.4
 
       - name: Run ESLint
         run: |

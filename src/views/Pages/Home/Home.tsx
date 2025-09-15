@@ -1,3 +1,4 @@
+import { ScriptsHub } from './ScriptsHub/ScriptsHub';
 import Roact from "@rbxts/roact";
 import { pure } from "@rbxts/roact-hooked";
 import Canvas from "components/Canvas";
